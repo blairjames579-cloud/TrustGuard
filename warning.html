@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>TrustGuard Warning</title>
+  <style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #121212; color: #e0e0e0; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+    .card { background: #1e1e1e; padding: 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); max-width: 480px; text-align: center; border-left: 6px solid #ff4d4d; }
+    h1 { color: #ff4d4d; font-size: 24px; margin-top: 0; }
+    .domain-badge { background: #2a2a2a; padding: 6px 14px; border-radius: 6px; font-family: monospace; font-size: 15px; color: #fff; display: inline-block; margin-bottom: 12px; border: 1px solid #444; }
+    p { color: #b0b0b0; line-height: 1.5; }
+    .btn-group { margin-top: 30px; display: flex; gap: 12px; justify-content: center; }
+    button { padding: 10px 20px; border: none; border-radius: 6px; font-weight: bold; cursor: pointer; }
+    .btn-back { background: #333; color: #fff; }
+    .btn-proceed { background: #ff4d4d; color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="card" id="warningCard">
+    <h1 id="warningTitle">⚠️ High Risk Site Blocked</h1>
+    <div class="domain-badge" id="blockedDomain">loading...</div>
+    <p id="warningDesc">TrustGuard flagged this website as potentially sketchy or unverified.</p>
+    <div class="btn-group">
+      <button class="btn-back" id="goBack">Go Back</button>
+      <button class="btn-proceed" id="whitelist">Proceed & Whitelist</button>
+    </div>
+  </div>
+  <script src="warning.js"></script>
+</body>
+</html>
